@@ -1,16 +1,20 @@
 package FirstLab_Strategy;
 
-import FirstLab_Strategy.BrakeForMoto.BrakeWithABS;
-import FirstLab_Strategy.BrakeForMoto.BrakeWithCeramicPads;
+import FirstLab_Strategy.DoctorPrescription.PrescriptionSomethingElse;
+import FirstLab_Strategy.DoctorPrescription.PrescriptionWithOperation;
+import FirstLab_Strategy.DoctorPrescription.PrescriptionWithPills;
+import FirstLab_Strategy.DoctorPrescription.PrescriptionWithProcedures;
+import FirstLab_Strategy.Doctors.BetaDoctor;
+import FirstLab_Strategy.Doctors.Doctor;
 
 public class Main {
     public static void main(String[] args) {
-        Moto KawasakiNinja300RR = new Moto("ninja300rr-WithABS");
+        Doctor doc = new Doctor();
+        doc.DoAnyPrescriptions( new PrescriptionSomethingElse());
+        doc.Prescript(new PrescriptionWithPills());
 
-        KawasakiNinja300RR.Brake(new BrakeWithABS());
-
-        Moto KawaskiNinja300 = new Moto("ninja300-WithoutABS-NotRace");
-
-        KawaskiNinja300.Brake(new BrakeWithCeramicPads());
+        BetaDoctor medSister = new BetaDoctor();
+        medSister.Prescript( new PrescriptionWithPills());
+        medSister.Prescript(new PrescriptionWithProcedures());
     }
 }

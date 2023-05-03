@@ -1,7 +1,9 @@
 Single program with worked strategy patern.
 
-Moto -> Brake
+Doc -> IDoc -> IBetaDoc
 
-Brake -> BrakeWithABS, BrakeWithCeramicPads, BrakeWithMetalPads.
+
+
+
 
 # strategyPaternVertaletik
