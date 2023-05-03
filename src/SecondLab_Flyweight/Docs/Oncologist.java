@@ -1,6 +1,8 @@
 package SecondLab_Flyweight.Docs;
 
-public class Oncologist implements IDoc{
+import SecondLab_Flyweight.IDoc;
+
+public class Oncologist implements IDoc {
     @Override
     public void HealPeople() {
         System.out.println("Heal cancer");
